@@ -28,6 +28,8 @@ public class MainActivity extends ActionBarActivity {
 
         mCurrentAccount = new BankAccount();
 
+
+
         mAmountDisplay = (TextView) findViewById(R.id.balance_display);
         mWithdrawButton = (Button) findViewById(R.id.withdraw_button);
         mDepositButton = (Button) findViewById(R.id.deposit_button);
@@ -38,7 +40,7 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 String amount = mAmountInput.getText().toString();
                 mCurrentAccount.withdraw(Double.parseDouble(amount));
-                mAmountDisplay.setText("Balance is: " + mCurrentAccount.getBalance());
+                mAmountDisplay.setText("Balance is: " +mCurrentAccount.getBalance());
             }
         });
 
