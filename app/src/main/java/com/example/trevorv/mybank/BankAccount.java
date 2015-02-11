@@ -4,17 +4,18 @@ package com.example.trevorv.mybank;
  * Created by TrevorV on 2/10/15.
  */
 public class BankAccount {
-    private double balance;
+    private double mBalance;
+    public static final double OVERDRAFT_FEE = 30;
 
-    public void withdraw(double amount){
-
+    public void withdraw(double amount) {
+        mBalance -= amount;
     }
 
-    public void deposit(double amount){
-
+    public void deposit(double amount) {
+        mBalance += amount;
     }
 
-    public double getBalance(){
-        return balance;
+    public double getBalance() {
+        return mBalance;
     }
 }
